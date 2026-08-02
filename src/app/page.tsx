@@ -1,6 +1,8 @@
 import React from 'react';
 import { Hero } from '@/components/sections/Hero';
+import { MarqueeBanner } from '@/components/sections/MarqueeBanner';
 import { GrowthSimulator } from '@/components/dashboard/GrowthSimulator';
+import { BentoGridSection } from '@/components/sections/BentoGridSection';
 import { PositioningSection } from '@/components/sections/PositioningSection';
 import { POVSection } from '@/components/sections/POVSection';
 import { ServicesGrid } from '@/components/sections/ServicesGrid';
@@ -14,39 +16,45 @@ import { ContactForm } from '@/components/sections/ContactForm';
 export default function HomePage() {
   return (
     <div className="space-y-12">
-      {/* 1. Big Hero Section */}
+      {/* 1. XPay-Style Hero Section with Floating Interactive Preview Card */}
       <Hero />
 
-      {/* 2. "Do the Math" Interactive Growth & ROI Simulator */}
-      <section id="math-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 scroll-mt-24">
+      {/* 2. XPay Infinite Trust Marquee Ticker */}
+      <MarqueeBanner />
+
+      {/* 3. Interactive Growth & ROI Spend Simulator */}
+      <section id="math-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 scroll-mt-24">
         <GrowthSimulator />
       </section>
 
-      {/* 3. Positioning Section: Brand ∩ Data Engineering ∩ Growth */}
+      {/* 4. XPay Feature Bento Grid Showcase */}
+      <BentoGridSection />
+
+      {/* 5. Positioning Section: Brand ∩ Data Engineering ∩ Growth */}
       <PositioningSection />
 
-      {/* 4. Statement POV: AI is coming for your profits */}
+      {/* 6. Glow White Point of View Block */}
       <POVSection />
 
-      {/* 5. Service Packages & Core Pillars */}
+      {/* 7. Enterprise Service Packages & Core Pillars */}
       <ServicesGrid />
 
-      {/* 6. Why Janusmaad: Receipts & Accountability */}
+      {/* 8. Why Janusmaad & Verified Receipts */}
       <WhyJanusmaadSection />
 
-      {/* 7. Team Culture: We don't hire fast. We keep people longer. */}
+      {/* 9. Studio Culture & Senior Architects */}
       <TeamCultureSection />
 
-      {/* 8. Client Qualification: Who we don't work with */}
+      {/* 10. Qualification: Who We Don't Work With */}
       <QualificationSection />
 
-      {/* 9. Verified Client Testimonials */}
+      {/* 11. Verified Client Testimonials */}
       <TestimonialsSection />
 
-      {/* 10. MarTech & Tech Stack Grid */}
+      {/* 12. MarTech & Tech Stack Grid */}
       <TechStackGrid />
 
-      {/* 11. Engagement & Contact Form */}
+      {/* 13. Consultation Booking & Lead Form */}
       <ContactForm />
     </div>
   );
