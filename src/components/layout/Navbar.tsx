@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -20,7 +19,6 @@ import {
   Zap,
   BarChart3,
   ArrowRight,
-  PhoneCall
 } from 'lucide-react';
 import { SERVICE_PACKAGES, SERVICE_PILLARS } from '@/data/janusContent';
 
@@ -44,17 +42,17 @@ export const Navbar: React.FC = () => {
 
   const getIconComponent = (iconName: string) => {
     switch (iconName) {
-      case 'TrendingUp': return <TrendingUp className="w-5 h-5 text-janus-purple" />;
-      case 'Database': return <Database className="w-5 h-5 text-janus-mint" />;
-      case 'PieChart': return <PieChart className="w-5 h-5 text-janus-purple" />;
-      case 'Sparkles': return <Sparkles className="w-5 h-5 text-janus-mint" />;
-      case 'Target': return <Target className="w-5 h-5 text-janus-purple" />;
-      case 'Search': return <Search className="w-5 h-5 text-janus-mint" />;
-      case 'Repeat': return <Repeat className="w-5 h-5 text-janus-purple" />;
-      case 'Layers': return <Layers className="w-5 h-5 text-janus-purple" />;
-      case 'Zap': return <Zap className="w-5 h-5 text-janus-mint" />;
-      case 'BarChart3': return <BarChart3 className="w-5 h-5 text-janus-purple" />;
-      default: return <Sparkles className="w-5 h-5 text-janus-mint" />;
+      case 'TrendingUp': return <TrendingUp className="w-5 h-5 text-black" />;
+      case 'Database': return <Database className="w-5 h-5 text-black" />;
+      case 'PieChart': return <PieChart className="w-5 h-5 text-black" />;
+      case 'Sparkles': return <Sparkles className="w-5 h-5 text-black" />;
+      case 'Target': return <Target className="w-5 h-5 text-black" />;
+      case 'Search': return <Search className="w-5 h-5 text-black" />;
+      case 'Repeat': return <Repeat className="w-5 h-5 text-black" />;
+      case 'Layers': return <Layers className="w-5 h-5 text-black" />;
+      case 'Zap': return <Zap className="w-5 h-5 text-black" />;
+      case 'BarChart3': return <BarChart3 className="w-5 h-5 text-black" />;
+      default: return <Sparkles className="w-5 h-5 text-black" />;
     }
   };
 
@@ -62,38 +60,26 @@ export const Navbar: React.FC = () => {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-janus-purple/10 shadow-lg shadow-janus-purple/5 py-3'
-          : 'bg-transparent py-4'
+          ? 'bg-white border-b border-black py-3'
+          : 'bg-white border-b border-neutral-200 py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Official Janusmaad Logo Image */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative h-10 w-44 sm:w-52 transition-transform duration-300 group-hover:scale-105">
-              <img
-                src="/logo.png"
-                alt="Janusmaad — Mad About Growth"
-                className="h-full w-full object-contain"
-              />
-            </div>
+          
+          <Link href="/" className="font-heading font-black text-2xl tracking-tighter">
+            JANUSMAAD.
           </Link>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
-              className={`text-sm font-semibold transition-colors hover:text-janus-purple relative py-1 ${
-                pathname === '/' ? 'text-janus-purple font-bold' : 'text-slate-700'
+              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-black ${
+                pathname === '/' ? 'text-black' : 'text-neutral-500'
               }`}
             >
               Home
-              {pathname === '/' && (
-                <motion.div
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-janus-purple to-janus-mint rounded-full"
-                />
-              )}
             </Link>
 
             {/* Mega Menu Dropdown Trigger */}
@@ -103,14 +89,14 @@ export const Navbar: React.FC = () => {
               onMouseLeave={() => setMegaMenuOpen(false)}
             >
               <button
-                className={`flex items-center gap-1.5 text-sm font-semibold py-1 transition-colors hover:text-janus-purple ${
-                  pathname.startsWith('/services') ? 'text-janus-purple font-bold' : 'text-slate-700'
+                className={`flex items-center gap-1 text-sm font-bold uppercase tracking-wider transition-colors hover:text-black ${
+                  pathname.startsWith('/services') ? 'text-black' : 'text-neutral-500'
                 }`}
               >
-                Service Packages
+                Services
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    megaMenuOpen ? 'rotate-180 text-janus-purple' : ''
+                    megaMenuOpen ? 'rotate-180' : ''
                   }`}
                 />
               </button>
@@ -123,37 +109,31 @@ export const Navbar: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full -left-20 w-[820px] pt-4 z-50"
+                    className="absolute top-full -left-20 w-[820px] pt-6 z-50"
                   >
-                    <div className="glass-panel rounded-2xl p-6 border border-janus-purple/15 shadow-2xl bg-white/95 backdrop-blur-2xl grid grid-cols-12 gap-6">
+                    <div className="bg-white border-2 border-black p-8 grid grid-cols-12 gap-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                       {/* Left: 7 Core Packages */}
-                      <div className="col-span-8 space-y-4">
-                        <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                          <span className="text-xs font-bold uppercase tracking-wider text-janus-purple">
+                      <div className="col-span-8 space-y-6">
+                        <div className="flex items-center justify-between pb-4 border-b-2 border-black">
+                          <span className="text-sm font-black uppercase tracking-widest text-black">
                             Enterprise Service Packages
                           </span>
-                          <span className="text-xs text-janus-muted">7 Tailored Solutions</span>
                         </div>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-2 gap-4">
                           {SERVICE_PACKAGES.map((pkg) => (
                             <Link
                               key={pkg.id}
                               href={pkg.href}
-                              className="group flex items-start gap-3 p-3 rounded-xl hover:bg-janus-purple/5 border border-transparent hover:border-janus-purple/15 transition-all"
+                              className="group flex items-start gap-4 p-4 border-2 border-transparent hover:border-black transition-all"
                             >
-                              <div className="p-2 rounded-lg bg-janus-purple/10 border border-janus-purple/20 group-hover:scale-105 transition-transform">
+                              <div className="mt-1">
                                 {getIconComponent(pkg.iconName)}
                               </div>
                               <div>
-                                <div className="text-xs font-bold text-slate-900 group-hover:text-janus-purple flex items-center gap-1.5">
+                                <div className="text-sm font-bold text-black mb-1">
                                   {pkg.shortTitle}
-                                  {pkg.badge && (
-                                    <span className="text-[9px] px-1.5 py-0.2 rounded bg-janus-purple/15 text-janus-purple font-semibold">
-                                      {pkg.badge}
-                                    </span>
-                                  )}
                                 </div>
-                                <p className="text-[11px] text-janus-muted line-clamp-1 mt-0.5">
+                                <p className="text-xs text-neutral-600 font-medium">
                                   {pkg.tagline}
                                 </p>
                               </div>
@@ -163,32 +143,31 @@ export const Navbar: React.FC = () => {
                       </div>
 
                       {/* Right: 4 Pillars & Quick CTA */}
-                      <div className="col-span-4 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                      <div className="col-span-4 flex flex-col justify-between pl-8 border-l-2 border-neutral-200">
                         <div>
-                          <span className="text-xs font-bold uppercase tracking-wider text-janus-mint block mb-3">
+                          <span className="text-sm font-black uppercase tracking-widest text-black block mb-6">
                             Core Pillars
                           </span>
-                          <div className="space-y-2">
+                          <div className="space-y-4">
                             {SERVICE_PILLARS.map((pillar) => (
                               <Link
                                 key={pillar.id}
                                 href={pillar.href}
-                                className="flex items-center gap-2 text-xs font-semibold text-slate-700 hover:text-janus-purple p-2 rounded-lg hover:bg-white transition-colors"
+                                className="block text-sm font-bold text-neutral-600 hover:text-black transition-colors"
                               >
-                                <div className="w-1.5 h-1.5 rounded-full bg-janus-purple" />
                                 {pillar.title}
                               </Link>
                             ))}
                           </div>
                         </div>
 
-                        <div className="mt-4 pt-3 border-t border-slate-200">
+                        <div className="mt-8 pt-6 border-t-2 border-neutral-200">
                           <Link
                             href="/contact"
-                            className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-gradient-to-r from-janus-purple to-janus-mint text-white text-xs font-bold shadow-md hover:opacity-95 transition-opacity"
+                            className="flex items-center gap-2 text-sm font-bold text-black hover:opacity-70 transition-opacity"
                           >
                             <span>Book Consultation</span>
-                            <ArrowRight className="w-3.5 h-3.5" />
+                            <ArrowRight className="w-4 h-4" />
                           </Link>
                         </div>
                       </div>
@@ -200,47 +179,29 @@ export const Navbar: React.FC = () => {
 
             <Link
               href="/partners"
-              className={`text-sm font-semibold transition-colors hover:text-janus-purple relative py-1 ${
-                pathname === '/partners' ? 'text-janus-purple font-bold' : 'text-slate-700'
+              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-black ${
+                pathname === '/partners' ? 'text-black' : 'text-neutral-500'
               }`}
             >
               Partners
-              {pathname === '/partners' && (
-                <motion.div
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-janus-purple to-janus-mint rounded-full"
-                />
-              )}
             </Link>
 
             <Link
               href="/team"
-              className={`text-sm font-semibold transition-colors hover:text-janus-purple relative py-1 ${
-                pathname === '/team' ? 'text-janus-purple font-bold' : 'text-slate-700'
+              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-black ${
+                pathname === '/team' ? 'text-black' : 'text-neutral-500'
               }`}
             >
               Our Team
-              {pathname === '/team' && (
-                <motion.div
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-janus-purple to-janus-mint rounded-full"
-                />
-              )}
             </Link>
 
             <Link
               href="/blog"
-              className={`text-sm font-semibold transition-colors hover:text-janus-purple relative py-1 ${
-                pathname === '/blog' ? 'text-janus-purple font-bold' : 'text-slate-700'
+              className={`text-sm font-bold uppercase tracking-wider transition-colors hover:text-black ${
+                pathname === '/blog' ? 'text-black' : 'text-neutral-500'
               }`}
             >
               Blog
-              {pathname === '/blog' && (
-                <motion.div
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-janus-purple to-janus-mint rounded-full"
-                />
-              )}
             </Link>
           </nav>
 
@@ -248,10 +209,9 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="relative group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-janus-purple via-janus-purple-light to-janus-mint text-white text-xs font-bold tracking-wide shadow-lg shadow-janus-purple/25 hover:shadow-janus-purple/40 transition-all duration-300 hover:scale-105 active:scale-95"
+              className="bg-black text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-neutral-800 transition-colors"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-white group-hover:rotate-12 transition-transform" />
-              <span>Let's Chat</span>
+              Let's Chat
             </Link>
           </div>
 
@@ -259,7 +219,7 @@ export const Navbar: React.FC = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setMobileDrawerOpen(!mobileDrawerOpen)}
-              className="p-2 rounded-xl bg-white border border-slate-200 text-slate-900 hover:text-janus-purple transition-colors shadow-sm"
+              className="p-2 border-2 border-black text-black hover:bg-neutral-100 transition-colors"
             >
               {mobileDrawerOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -274,66 +234,66 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl"
+            className="lg:hidden bg-white border-b-2 border-black px-6 py-6 space-y-6"
           >
             <Link
               href="/"
               onClick={() => setMobileDrawerOpen(false)}
-              className="block text-base font-bold text-slate-900 hover:text-janus-purple"
+              className="block text-xl font-black uppercase tracking-wider text-black"
             >
               Home
             </Link>
-            <div className="space-y-2 pt-2 border-t border-slate-100">
-              <span className="text-xs font-bold text-janus-purple uppercase">
+            <div className="space-y-4 pt-4 border-t-2 border-neutral-100">
+              <span className="text-sm font-black text-black uppercase tracking-widest">
                 Services
               </span>
-              <div className="grid grid-cols-1 gap-2 pl-2">
+              <div className="grid grid-cols-1 gap-4 pl-4">
                 {SERVICE_PACKAGES.map((pkg) => (
                   <Link
                     key={pkg.id}
                     href={pkg.href}
                     onClick={() => setMobileDrawerOpen(false)}
-                    className="text-sm font-medium text-slate-700 hover:text-janus-purple flex items-center gap-2 py-1"
+                    className="text-base font-bold text-neutral-600 hover:text-black flex items-center gap-2"
                   >
-                    <ArrowRight className="w-3 h-3 text-janus-mint" />
+                    <ArrowRight className="w-4 h-4" />
                     {pkg.shortTitle}
                   </Link>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-2 pt-2 border-t border-slate-100">
+            <div className="space-y-4 pt-4 border-t-2 border-neutral-100">
               <Link
                 href="/partners"
                 onClick={() => setMobileDrawerOpen(false)}
-                className="block text-base font-bold text-slate-900 hover:text-janus-purple"
+                className="block text-xl font-black uppercase tracking-wider text-black"
               >
                 Partners
               </Link>
               <Link
                 href="/team"
                 onClick={() => setMobileDrawerOpen(false)}
-                className="block text-base font-bold text-slate-900 hover:text-janus-purple"
+                className="block text-xl font-black uppercase tracking-wider text-black"
               >
                 Our Team
               </Link>
               <Link
                 href="/blog"
                 onClick={() => setMobileDrawerOpen(false)}
-                className="block text-base font-bold text-slate-900 hover:text-janus-purple"
+                className="block text-xl font-black uppercase tracking-wider text-black"
               >
                 Blog
               </Link>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-6">
               <Link
                 href="/contact"
                 onClick={() => setMobileDrawerOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-janus-purple to-janus-mint text-white font-bold text-sm shadow-lg shadow-janus-purple/20"
+                className="w-full flex items-center justify-center gap-2 py-4 bg-black text-white font-black text-lg uppercase tracking-wider"
               >
                 <span>Let's Chat</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>

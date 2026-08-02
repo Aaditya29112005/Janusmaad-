@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg-janus: #FAFCFF;
+  --bg-janus: #FFFFFF;
   --purple-glow: rgba(120, 81, 169, 0.25);
   --mint-glow: rgba(72, 190, 156, 0.25);
 }
@@ -17,46 +17,62 @@
 
 body {
   background-color: var(--bg-janus);
-  color: #0F172A;
+  color: #000000;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography Headings */
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Space Grotesk', sans-serif;
-  color: #0F172A;
+  color: #000000;
+  letter-spacing: -0.04em;
 }
 
-/* Glow White Glassmorphism Styles */
+.heading-xl {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+/* Glow White Utility Styles */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(120, 81, 169, 0.12);
-  box-shadow: 0 10px 40px -10px rgba(120, 81, 169, 0.12), 0 4px 20px -5px rgba(72, 190, 156, 0.08);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.8) 100%);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(120, 81, 169, 0.12);
-  box-shadow: 0 8px 30px -5px rgba(15, 23, 42, 0.04);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(120, 81, 169, 0.4);
-  box-shadow: 0 15px 35px -5px rgba(120, 81, 169, 0.2), 0 8px 20px -5px rgba(72, 190, 156, 0.15);
-  transform: translateY(-5px);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
-.glass-card-mint:hover {
-  border-color: rgba(72, 190, 156, 0.4);
-  box-shadow: 0 15px 35px -5px rgba(72, 190, 156, 0.2), 0 8px 20px -5px rgba(120, 81, 169, 0.15);
-  transform: translateY(-5px);
+/* Custom Buttons */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-black text-white font-semibold text-lg hover:bg-neutral-800 transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-black border border-black/10 font-semibold text-lg hover:bg-neutral-50 transition-colors duration-300 shadow-sm;
 }
 
 /* Gradient Text Utilities */
@@ -66,29 +82,17 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-purple {
-  background: linear-gradient(135deg, #0F172A 0%, #7851A9 70%, #9B6FD0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-mint {
-  background: linear-gradient(135deg, #0F172A 0%, #48BE9C 70%, #6EE7C4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAFCFF;
+  background: #FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(120, 81, 169, 0.3);
+  background: #CCCCCC;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(72, 190, 156, 0.6);
+  background: #999999;
 }

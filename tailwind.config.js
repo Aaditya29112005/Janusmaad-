@@ -40,6 +40,7 @@ module.exports = {
       animation: {
         'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
         'float': 'float 6s ease-in-out infinite',
+        'fadeIn': 'fadeIn 1s ease forwards',
       },
       keyframes: {
         pulseGlow: {
@@ -49,6 +50,10 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        fadeIn: {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' },
         },
       },
     },
