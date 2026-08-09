@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUp } from 'lucide-react';
-import { BRAND_INFO, SERVICE_PACKAGES, SERVICE_PILLARS } from '@/data/janusContent';
+import { ArrowRight, ArrowUp } from 'lucide-react';
+import { BRAND_INFO } from '@/data/janusContent';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -13,106 +13,100 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-black text-white pt-24 pb-12">
+    <footer className="bg-[#0A0A0B] text-white pt-24 pb-16 relative z-10 border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top CTA area */}
-        <div className="mb-24">
-          <h3 className="heading-lg mb-8">
-            Ready to Scale Your Business by 500X?
-          </h3>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-black font-bold px-8 py-4 hover:bg-neutral-200 transition-colors"
-          >
-            Book Free Strategy Call
-          </Link>
-        </div>
-
-        <div className="h-px w-full bg-neutral-800 mb-16" />
-
-        {/* 4-Column Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-          
-          <div className="space-y-6">
-            <Link href="/" className="inline-block bg-white p-2 border border-neutral-700 rounded-sm">
-              <img
-                src="/JM_Logo_Alt.png"
-                alt="Janusmaad Logo"
-                className="h-10 w-auto object-contain"
-              />
-            </Link>
-            <p className="text-neutral-400 font-medium">
-              We don't just do marketing. We deliver growth. Building enterprise-grade Customer Data Platforms (CDP), multi-touch attribution, and Search Everywhere Optimization.
-            </p>
-            <div className="space-y-2 text-sm text-neutral-300 font-medium">
-              <p>{BRAND_INFO.address}</p>
-              <a href={`tel:${BRAND_INFO.phone}`} className="block hover:text-white transition-colors">{BRAND_INFO.phone}</a>
-              <a href={`mailto:${BRAND_INFO.email}`} className="block hover:text-white transition-colors">{BRAND_INFO.email}</a>
+        {/* Top Massive Display Headline matching Screenshot 5 */}
+        <div className="mb-20">
+          <div className="flex justify-end mb-6">
+            <div className="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#CCFF00] animate-ping inline-block" />
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-bold text-lg mb-4">Service Packages</h4>
-            <ul className="space-y-3 font-medium text-neutral-400">
-              {SERVICE_PACKAGES.map((pkg) => (
-                <li key={pkg.id}>
-                  <Link href={pkg.href} className="hover:text-white transition-colors">
-                    {pkg.shortTitle}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-bold text-lg mb-4">Company</h4>
-            <ul className="space-y-3 font-medium text-neutral-400">
-              {SERVICE_PILLARS.map((pillar) => (
-                <li key={pillar.id}>
-                  <Link href={pillar.href} className="hover:text-white transition-colors">
-                    {pillar.title}
-                  </Link>
-                </li>
-              ))}
-              <li><Link href="/partners" className="hover:text-white transition-colors">Partners Ecosystem</Link></li>
-              <li><Link href="/team" className="hover:text-white transition-colors">Leadership Team</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Growth Insights Blog</Link></li>
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-bold text-lg mb-4">Newsletter</h4>
-            <p className="text-neutral-400 font-medium mb-4">
-              Bi-weekly technical breakdowns on CDP data pipelines, multi-touch attribution, and omnichannel SEO.
-            </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your work email"
-                className="w-full bg-neutral-900 border border-neutral-800 p-3 text-white focus:outline-none focus:border-neutral-500 transition-colors"
-              />
-              <button
-                type="button"
-                className="bg-white text-black font-bold px-4 hover:bg-neutral-200 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-[0.9] text-left">
+            landing<br />
+            pages that<br />
+            <span className="text-[#CCFF00]">earn their keep.</span>
+          </h2>
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500 font-medium">
+        {/* Horizontal Divider */}
+        <div className="h-px w-full bg-neutral-800/80 mb-16" />
+
+        {/* 4-Column Footer Specification Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20 font-mono text-xs">
+          
+          {/* Column 1: The Promise */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="text-neutral-500 uppercase tracking-widest flex items-center gap-2">
+              <span className="text-neutral-600">●</span> THE PROMISE
+            </div>
+            
+            <p className="text-neutral-300 font-normal text-sm leading-relaxed max-w-md">
+              We ship landing pages that convert <strong className="text-[#CCFF00] font-bold">at least +20% better</strong> than what's running today. If they don't, we keep working. No retainer theatre.
+            </p>
+
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-[#CCFF00] text-black font-bold px-6 py-3.5 text-xs uppercase tracking-wider hover:bg-[#b8e600] transition-colors shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]"
+            >
+              <span>Send your URL</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Column 2: Work */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="text-neutral-500 uppercase tracking-widest flex items-center gap-2">
+              <span className="text-neutral-600">●</span> WORK
+            </div>
+            <ul className="space-y-3 text-neutral-400 font-medium text-sm">
+              <li><Link href="#testimonials" className="hover:text-white transition-colors">Receipts</Link></li>
+              <li><Link href="#services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="#process" className="hover:text-white transition-colors">Process</Link></li>
+              <li><Link href="#why-us" className="hover:text-white transition-colors">Hall of Fame</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Words */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="text-neutral-500 uppercase tracking-widest flex items-center gap-2">
+              <span className="text-neutral-600">●</span> WORDS
+            </div>
+            <ul className="space-y-3 text-neutral-400 font-medium text-sm">
+              <li><Link href="#math-section" className="hover:text-white transition-colors">The math</Link></li>
+              <li><Link href="#why-us" className="hover:text-white transition-colors">Why CRO</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Blog Insights</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Location & Socials */}
+          <div className="lg:col-span-3 space-y-4">
+            <div className="text-neutral-500 uppercase tracking-widest flex items-center gap-2">
+              <span className="text-neutral-600">●</span> LOCATION & SOCIALS
+            </div>
+            <ul className="space-y-3 text-neutral-400 font-medium text-sm">
+              <li className="text-white font-bold">Surat · IN / Noida · IN</li>
+              <li><a href={BRAND_INFO.socials.linkedin} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href={BRAND_INFO.socials.twitter} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X / Twitter</a></li>
+              <li><a href={`mailto:${BRAND_INFO.email}`} className="hover:text-white transition-colors">{BRAND_INFO.email}</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Bottom Copyright & Top Scroll */}
+        <div className="pt-8 border-t border-neutral-900 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-neutral-500">
           <p>{BRAND_INFO.copyright}</p>
           
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <button
               onClick={scrollToTop}
-              className="hover:text-white transition-colors flex items-center gap-1 font-bold"
+              className="hover:text-white transition-colors flex items-center gap-1 font-bold text-white"
             >
-              Back to top <ArrowUp className="w-4 h-4" />
+              Back to top <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
@@ -121,3 +115,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
