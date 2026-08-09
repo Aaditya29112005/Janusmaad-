@@ -24,81 +24,80 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-32 relative z-10 bg-[#F8F9FA]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 relative z-10 bg-[#F9F8F3] border-b border-black/10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="mb-16">
-          <h2 className="heading-lg text-black mb-6">Let's connect.</h2>
-          <p className="text-xl text-neutral-600 font-medium">
-            Have questions about setting up a CDP, multi-touch attribution, or Search Everywhere SEO? Let's talk.
+        <div className="mb-14 text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-heading font-black text-black tracking-tight mb-4">
+            Lets BUILD landing pages that earn their keep
+          </h2>
+          <p className="text-xl text-neutral-700 font-medium max-w-2xl mx-auto">
+            Book a live audit call or drop us a message. We promise a clear growth roadmap — not a 40-slide pitch deck.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 md:p-12 border border-neutral-200">
+        <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 md:p-12 border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label className="text-sm font-bold text-black uppercase tracking-wider">Full Name</label>
+              <label className="text-xs font-mono font-bold text-black uppercase tracking-wider">Full Name *</label>
               <input
                 type="text"
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full bg-neutral-100 border-0 p-4 text-black focus:ring-2 focus:ring-black transition-shadow"
+                className="w-full bg-[#F9F8F3] border border-black p-3.5 text-black font-medium focus:ring-2 focus:ring-black outline-none"
+                placeholder="John Doe"
               />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-bold text-black uppercase tracking-wider">Phone</label>
+              <label className="text-xs font-mono font-bold text-black uppercase tracking-wider">Phone</label>
               <input
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full bg-neutral-100 border-0 p-4 text-black focus:ring-2 focus:ring-black transition-shadow"
+                className="w-full bg-[#F9F8F3] border border-black p-3.5 text-black font-medium focus:ring-2 focus:ring-black outline-none"
+                placeholder="+91 98765 43210"
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-bold text-black uppercase tracking-wider">Work Email</label>
+            <label className="text-xs font-mono font-bold text-black uppercase tracking-wider">Work Email *</label>
             <input
               type="email"
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full bg-neutral-100 border-0 p-4 text-black focus:ring-2 focus:ring-black transition-shadow"
+              className="w-full bg-[#F9F8F3] border border-black p-3.5 text-black font-medium focus:ring-2 focus:ring-black outline-none"
+              placeholder="john@brand.com"
             />
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-bold text-black uppercase tracking-wider">Message</label>
+            <label className="text-xs font-mono font-bold text-black uppercase tracking-wider">Store URL / Message *</label>
             <textarea
               required
-              rows={5}
+              rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full bg-neutral-100 border-0 p-4 text-black focus:ring-2 focus:ring-black transition-shadow resize-none"
+              className="w-full bg-[#F9F8F3] border border-black p-3.5 text-black font-medium focus:ring-2 focus:ring-black outline-none resize-none"
+              placeholder="Tell us about your brand, current conversion rate, and ad spend..."
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-black text-white font-bold py-5 hover:bg-neutral-800 transition-colors"
+            className="w-full bg-[#CCFF00] text-black border-2 border-black font-black py-4 uppercase tracking-wider text-base hover:bg-[#b8e600] transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px]"
           >
-            Submit Request
+            Submit Request & Book Audit
           </button>
 
           {submitted && (
-            <div className="p-4 bg-green-50 text-green-800 font-bold text-sm text-center">
-              Thank you! Your message has been received.
+            <div className="p-4 bg-[#CCFF00] border border-black text-black font-mono font-bold text-sm text-center">
+              ✓ Thank you! Your request has been received. We will get back within 24 hours.
             </div>
           )}
-
-          <div className="text-sm text-neutral-500 font-medium text-center">
-            By completing this form, you agree to our{' '}
-            <Link href="/privacy" className="text-black font-bold border-b border-black">
-              Privacy Policy
-            </Link>.
-          </div>
 
         </form>
 
@@ -106,3 +105,4 @@ export const ContactForm: React.FC = () => {
     </section>
   );
 };
+
