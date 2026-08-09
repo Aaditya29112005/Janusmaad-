@@ -35,8 +35,12 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           
           <div className="space-y-6">
-            <Link href="/" className="inline-block text-2xl font-bold font-heading">
-              JANUSMAAD.
+            <Link href="/" className="inline-block bg-white p-2 border border-neutral-700 rounded-sm">
+              <img
+                src="/JM_Logo_Alt.png"
+                alt="Janusmaad Logo"
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-neutral-400 font-medium">
               We don't just do marketing. We deliver growth. Building enterprise-grade Customer Data Platforms (CDP), multi-touch attribution, and Search Everywhere Optimization.

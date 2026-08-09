@@ -44,12 +44,11 @@ export const Navbar: React.FC = () => {
           
           {/* Left Brand Badge & Name */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 bg-[#CCFF00] border border-black flex items-center justify-center font-mono font-black text-black text-sm">
-              L
-            </div>
-            <span className="font-heading font-black text-xl tracking-tight text-black group-hover:opacity-80 transition-opacity">
-              The Landing Page Co.
-            </span>
+            <img
+              src="/JM_Logo.png"
+              alt="Janusmaad Logo"
+              className="h-10 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
