@@ -13,9 +13,9 @@ export const Hero: React.FC = () => {
         <div className="mb-12">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-heading font-black text-black tracking-tight leading-[1.05]">
             Landing pages<br />
-            that pays itself.<br />
+            that pay for themselves.<br />
             Make more money<br />
-            from same ad spend
+            from the same ad spend
           </h1>
         </div>
 
