@@ -25,9 +25,8 @@ export const Footer: React.FC = () => {
           </div>
 
           <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-[0.9] text-left">
-            landing<br />
-            pages that<br />
-            <span className="text-[#CCFF00]">earn their keep.</span>
+            Unlock your<br />
+            <span className="text-[#CCFF00]">Gateways to Growth</span>
           </h2>
         </div>
 
