@@ -12,7 +12,7 @@ export const PositioningSection: React.FC = () => {
           <RollingText text="Most agencies pick two." delay={0.1} />
         </h2>
         
-        <div className="text-xl leading-relaxed text-neutral-600 font-medium space-y-8 max-w-2xl mx-auto text-left">
+        <div className="text-xl leading-relaxed text-neutral-900 font-normal space-y-8 max-w-2xl mx-auto text-left">
           <p>
             Traditional agencies give you pretty designs without analytics schemas, or media buyers who burn cash without tracking data lineage.
           </p>

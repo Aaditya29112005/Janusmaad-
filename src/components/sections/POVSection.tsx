@@ -15,7 +15,7 @@ export const POVSection: React.FC = () => {
             </h2>
           </div>
 
-          <div className="space-y-8 text-neutral-600 text-lg leading-relaxed font-medium">
+          <div className="space-y-8 text-neutral-900 text-lg leading-relaxed font-normal">
             <p>
               Every brand now has access to the same tools, the same stock copy, the same landing page template with a gradient and a dog. Good enough is free. Good enough also doesn't convert.
             </p>
