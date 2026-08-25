@@ -206,12 +206,12 @@ export const SERVICE_PILLARS = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: 'vishwajeet',
-    quote: 'Team has skilled professionals who plan, maintain and keep targets and tasks onboard which helps us see the progress from our own eyes. They are very Responsive, Honest, Genuine and go above and over boundaries and time for us. Helped increase traffic from Single digit to Triple digit. Or you can say increased web traffic 500X. Enabled Data-Driven Marketing & Advertising.',
-    author: 'Vishwajeet Rawat',
+    id: 'prashant',
+    quote: 'Parag and his team bring a wealth of experience in digital marketing and I have full trust in Janusmaad to help me grow my business. They are passionate about the customer journey and have demonstrated strong technical knowledge in analytics, social media marketing, data integration and lifecycle marketing. Thank you guys and I would recommend highly to anyone seeking guidance in this subject.',
+    author: 'Prashant Alambara',
     role: 'Founder',
-    company: 'Enterprise Client',
-    metric: '500X Traffic Increase',
+    company: 'Happy Home Broker Owner',
+    metric: 'Full Customer Journey Mastery',
   },
   {
     id: 'ben',
@@ -222,12 +222,12 @@ export const TESTIMONIALS: Testimonial[] = [
     metric: 'High Efficiency Advertising',
   },
   {
-    id: 'prashant',
-    quote: 'Parag and his team bring a wealth of experience in digital marketing and I have full trust in Janusmaad to help me grow my business. They are passionate about the customer journey and have demonstrated strong technical knowledge in analytics, social media marketing, data integration and lifecycle marketing. Thank you guys and I would recommend highly to anyone seeking guidance in this subject.',
-    author: 'Prashant Alambara',
+    id: 'vishwajeet',
+    quote: 'Team has skilled professionals who plan, maintain and keep targets and tasks onboard which helps us see the progress from our own eyes. They are very Responsive, Honest, Genuine and go above and over boundaries and time for us. Helped increase traffic from Single digit to Triple digit. Or you can say increased web traffic 500X. Enabled Data-Driven Marketing & Advertising.',
+    author: 'Vishwajeet Rawat',
     role: 'Founder',
-    company: 'Happy Home Broker Owner',
-    metric: 'Full Customer Journey Mastery',
+    company: 'Himalayan Panacea',
+    metric: '500X Traffic Increase',
   },
 ];
 
@@ -501,17 +501,36 @@ export const SEO_FAQS: FAQItem[] = [
 
 export const TECH_STACK = [
   { name: 'Segment', category: 'CDP & Data Routing' },
+  { name: 'Adobe Experience Platform', category: 'Enterprise CDP' },
+  { name: 'Tealium', category: 'Customer Data Hub' },
+  { name: 'Snowplow', category: 'Behavioral Data Engine' },
+  { name: 'Adobe Analytics', category: 'Enterprise Analytics' },
   { name: 'Mixpanel', category: 'Product Analytics' },
-  { name: 'Amplitude', category: 'Behavioral Analytics' },
-  { name: 'Braze', category: 'Customer Engagement' },
-  { name: 'Klaviyo', category: 'Lifecycle Automation' },
   { name: 'Google Analytics 4', category: 'Web Analytics' },
-  { name: 'Snowflake', category: 'Data Warehouse' },
-  { name: 'Google Cloud Platform', category: 'Cloud & Infrastructure' },
-  { name: 'Meta Ads', category: 'Paid Advertising' },
-  { name: 'Google Ads', category: 'Search & Display' },
-  { name: 'TikTok Ads', category: 'Short Form Video Ads' },
-  { name: 'AWS', category: 'Cloud Services' },
+  { name: 'Analytics 360', category: 'Enterprise Web Analytics' },
+  { name: 'Amplitude', category: 'Behavioral Analytics' },
+  { name: 'Visual Website Optimizer', category: 'A/B Testing & Heatmaps' },
+  { name: 'Braze', category: 'Customer Engagement' },
+  { name: 'HubSpot', category: 'Inbound & Automation' },
+  { name: 'Adobe Campaign', category: 'Cross-Channel Marketing' },
+  { name: 'Optimizely', category: 'Experimentation Platform' },
+  { name: 'Branch', category: 'Deep Linking & Attribution' },
+  { name: 'Ensighten', category: 'Tag Management' },
+  { name: 'Hotjar', category: 'Behavior Analytics' },
+  { name: 'Adobe Launch', category: 'Tag Management' },
+  { name: 'Google Tag Manager', category: 'Tag Infrastructure' },
+  { name: 'Crazyegg', category: 'Click Heatmaps' },
+  { name: 'Looker', category: 'Business Intelligence' },
+  { name: 'Google BigQuery', category: 'Data Warehouse' },
+  { name: 'Google Data Studio', category: 'Data Visualization' },
+  { name: 'Tableau', category: 'Data Analytics' },
+  { name: 'Google Ads', category: 'Search & Display Ads' },
+  { name: 'Meta Business Suite', category: 'Paid Social Ads' },
+  { name: 'X Business', category: 'Paid Advertising' },
+  { name: 'Google Marketing Platform', category: 'Ad Tech Suite' },
+  { name: 'Bing Ads', category: 'Search Advertising' },
+  { name: 'LinkedIn Marketing Solutions', category: 'B2B Advertising' },
+  { name: 'TikTok for Business', category: 'Short-Form Video Ads' },
 ];
 
 export const BLOG_POSTS = [
@@ -540,3 +559,4 @@ export const BLOG_POSTS = [
     readTime: '5 min read',
   },
 ];
+

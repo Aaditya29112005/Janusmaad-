@@ -5,18 +5,20 @@ import { motion } from 'framer-motion';
 
 export const MarqueeBanner: React.FC = () => {
   const CLIENT_BRANDS = [
+    { name: 'Wildmoss', category: 'Fashion & Apparel' },
+    { name: 'Kicky & Perky', category: 'Jewelry & Lifestyle' },
+    { name: 'Espira', category: 'Luxury Goods' },
+    { name: 'Himalayan Panacea', category: 'Wellness & Health' },
+    { name: 'Paperbark Camp', category: 'Hospitality & Travel' },
+    { name: 'True Pillars', category: 'Fintech & Finance' },
+    { name: 'Gaadiweb', category: 'Automotive Portal' },
+    { name: 'Swas Stationery', category: 'E-Commerce' },
+    { name: 'Happy Home Broker', category: 'Real Estate Tech' },
     { name: 'Wellbeing Nutrition', category: 'D2C Health' },
     { name: 'Zeroharm', category: 'Nutraceuticals' },
     { name: 'Healthfab', category: 'Apparel & Tech' },
     { name: 'The Basic Women', category: 'Fashion & Wellness' },
     { name: 'Itokri', category: 'Artisan E-comm' },
-    { name: 'Paper Bark Camp', category: 'Hospitality' },
-    { name: 'Minimalist', category: 'Skincare D2C' },
-    { name: 'Foxtale', category: 'Beauty Tech' },
-    { name: 'Dr. Sheth\'s', category: 'Dermatology' },
-    { name: 'Kapiva', category: 'Ayurveda Growth' },
-    { name: 'Bare Anatomy', category: 'Personalized Care' },
-    { name: 'Snitch', category: 'Fast Fashion' },
   ];
 
   return (
